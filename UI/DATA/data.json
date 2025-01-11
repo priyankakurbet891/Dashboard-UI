@@ -1,0 +1,19 @@
+{
+  "projects": [
+      {
+          "user": "sayedameen_Pro",
+          "status": "Running",
+          "progress": 50
+      },
+      {
+          "user": "john_doe",
+          "status": "Not Running",
+          "progress": 30
+      },
+      {
+          "user": "jane_doe",
+          "status": "Running",
+          "progress": 80
+      }
+  ]
+}

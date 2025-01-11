@@ -1,0 +1,277 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.header-content h4 {
+  margin-left: 10px; /* Proper spacing between icon and username */
+}
+
+/* Navbar */
+.navbar {
+  background-color: #3949ab;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Navbar links */
+.navbar .menu a {
+  color: #f0f0f0; /* Off-white color */
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.navbar .menu a i {
+  font-size: 18px; /* Icon size */
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 220px;
+  height: calc(100vh - 60px);
+  background-color: #f4f4f4;
+  padding-top: 20px;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar li {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar li.active {
+  background-color: #e0e0e0;
+  font-weight: bold;
+  color: #3949ab;
+  border-left: 4px solid #3949ab;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 240px;
+  padding: 80px 20px;
+}
+
+.title {
+  font-size: 20px; /* Smaller title font size */
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Cards Container */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.project-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.project-card .card-header .icon {
+  font-size: 20px;
+}
+
+.project-card .card-header .menu-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.project-card .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-card .status-time {
+  display: flex;
+  flex-direction: column; /* Stack "Running" and "Time" vertically */
+  align-items: flex-start; /* Align them to the left */
+  gap: 10px;
+}
+
+.project-card .status-time-lorem {
+  display: flex;
+  align-items: flex-start; /* Align items at the top */
+  gap: 20px; /* Add space between the vertical and lorem sections */
+}
+
+.project-card .status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.project-card .indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.project-card .time {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between the clock icon and the time */
+  font-size: 14px;
+  color: #666;
+}
+
+.project-card .lorem-section {
+  position: relative;
+}
+
+.project-card .lorem-section .details-link {
+  color: #3949ab;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  display: block;
+  text-decoration: none;
+}
+
+.project-card .lorem-section .options-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  padding: 10px;
+  z-index: 20;
+}
+
+.project-card .lorem-section .option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.project-card .lorem-section .option:hover {
+  background-color: #f0f0f0;
+}
+
+.project-card .lorem-section .option i {
+  font-size: 16px;
+}
+
+.project-card .lorem-section .details-link.active + .options-container {
+  display: block;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  padding: 8px 12px;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.actions .start {
+  background-color: green;
+  color: white;
+}
+
+.actions .stop {
+  background-color: red;
+  color: white;
+}
+
+/* Progress Bar */
+.project-card .progress {
+  width: 100%;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.project-card .progress-bar {
+  height: 8px;
+  background-color: green;
+}
+
+.project-card .progress-bar.error {
+  background-color: red;
+}
+
+.project-card .error-text {
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.project-card .divider {
+  width: 1px;
+  background-color: #ddd;
+  height: 100%;
+  margin: 0 20px;
+}
