@@ -10,7 +10,7 @@ This is a simple dashboard UI that includes a navbar, sidebar, and dynamic conte
 
 ## Demo
 
-![Dashboard UI Preview](IMG/UltestDesign1.png)
+![Dashboard UI Preview](IMG/UltestDesign1.jpg)
 
 > The image above shows a preview of the dashboard interface.
 
